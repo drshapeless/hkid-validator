@@ -1,0 +1,56 @@
+#+TITLE: HKID Validator
+
+The algorithm is based on
+[[https://computerterminal.blogspot.com/2005/11/hkid-calculation.html]].
+
+[[./algorithm.org][Algorithm]]
+
+Supports multiple languages, see below.
+
+All the libraries are case-insensitive. "a123456a" and "A123456A" are
+no different.
+
+* Go
+At source root.
+#+begin_src shell
+  go get github.com/drshapeless/hkidvalidator/go
+#+end_src
+
+#+begin_src go
+  import hkidvalidator
+
+  // Usage:
+  // checkHKID(string)
+  // Returns True or False
+
+  checkHKID("A1234567")						// Returns False
+#+end_src
+
+* C
+Compile with the source file, ~hkidvalidator.c~ and ~hkidvalidator.h~.
+#+begin_src c
+  #include "hkidvalidator.h"
+
+  /* Usage */
+  /* checkHKID(char *) */
+  /* Returns 1 or 0 */
+  /* 1 is true */
+
+  checkHKID("A1234567")           /* Returns 0 */
+#+end_src
+
+* Python
+Copy ~hkidvalidator.py~ to the project directory.
+#+begin_src python
+  import hkidvalidator
+
+  hkidvalidator.checkHKID("A1234567") # Returns False
+#+end_src
+
+* JavaScript
+Copy ~hkidvalidator.js~ to the project directory.
+#+begin_src js
+  const v = require("./hkidvalidator.js")
+
+  v.checkHKID("A1234567")         // Returns false
+#+end_src

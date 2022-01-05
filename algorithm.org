@@ -1,0 +1,29 @@
+#+TITLE: Algorithm
+
+- A valid HKID should be 8 or 9 digits long.
+- The first character of 8-digit HKID is an alphabet.
+- The first and second characters of 9-digit HKID are alphabets.
+- The following characters except for the last one in parenthesis are numbers.
+- The last character, aka the check digit, is a number or 'A'.
+
+
+* Validation of check digit.
+For 8-digit HKID, prepend a space at front to make a 9-digit string.
+
+For every digit, from left to right.
+
+'A' = 10, 'B' = 11, ... , 'Z' = 35
+
+Space ' ' = 36
+
+Digit is its own value.
+
+sum = 1st * 9, 2nd * 8, 3rd * 7, 4nd * 6, 5nd * 5, 6nd * 4, 7nd * 3, 8nd * 2
+
+mod = sum % 11
+
+If mod is 0, check digit is 0.
+
+If mod is 1, check digit is 'A'.
+
+If mod is 2-9, check digit is 11 - mod.
