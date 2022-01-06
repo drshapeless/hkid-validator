@@ -17,13 +17,13 @@ At source root.
 #+end_src
 
 #+begin_src go
-  import hkidvalidator
+  import "github.com/drshapeless/hkid-validator/go/hkidvalidator"
 
   // Usage:
   // checkHKID(string)
   // Returns True or False
 
-  checkHKID("A1234567")						// Returns False
+  hkidvalidator.CheckHKID("A1234567")						// Returns False
 #+end_src
 
 * C
