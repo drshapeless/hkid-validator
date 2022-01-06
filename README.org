@@ -13,7 +13,7 @@ no different.
 * Go
 At source root.
 #+begin_src shell
-  go get github.com/drshapeless/hkidvalidator/go/hkidvalidator
+  go get github.com/drshapeless/hkid-validator/go/hkidvalidator
 #+end_src
 
 #+begin_src go
